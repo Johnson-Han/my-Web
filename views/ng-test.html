@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>angular-测试
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8 ">
+    <meta name="Author" content="Johnson Han">
+    <meta name="description" content="angular的学习文档">
+    <!-- <link ="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"> -->
+    <script src="/scripts/angular.min.js"></script>
+</head>
+<body>
+<div ng-app="hd" ng-controller="ctrl">
+    <select ng-options="v.value as v.name for v in data" ng-model="city"></select>
+    
+</div>
+<script>
+    var m=angular.module('hd',[]);
+    m.controller('ctrl',['$scope',function($scope){
+        $scope.data =[
+            {name:'河南',value:'Henan'},
+            {name:'安徽',value:'Anhui'},
+            {name:'浙江', value: 'Zhejiang' }
+
+        ];
+    }]);    
+</script>
+</body>
+</html>
